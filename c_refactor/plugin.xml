@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:org.eclipse.ui.popup.any">
+         <menu
+               label="C Refactor...">
+            <command
+                  commandId="c_refactor.plugin.project.command.classfile"
+                  id="classfileId"
+                  style="push">
+            </command>
+            <command
+                  commandId="c_refactor.plugin.project.command.classfile2"
+                  id="classfile2Id"
+                  style="push">
+            </command>
+             <command
+                  commandId="c_refactor.plugin.project.command.classfile3"
+                  id="classfile3Id"
+                  style="push">
+            </command>
+             <command
+                  commandId="c_refactor.plugin.project.command.classfile4"
+                  id="classfile4Id"
+                  style="push">
+            </command>
+             <command
+                  commandId="c_refactor.plugin.project.command.classfile5"
+                  id="classfile5Id"
+                  style="push">
+            </command>
+             <command
+                   commandId="c_refactor.plugin.project.command.classfile6"
+                   id="classfile6Id"
+                   style="push">
+             </command>
+             <command
+                   commandId="c_refactor.plugin.project.command.classfile7"
+                   id="classfile7Id"
+                   style="push">
+             </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               label="C Refactor...">
+            <command
+                  commandId="Eliminate Common Sub-Expression"
+                  id="c_refactor.menus.ToolMenuCommand1"
+                  style="push">
+            </command>
+            <command
+                  commandId="Eliminate Dead Code"
+                  id="c_refactor.menus.ToolMenuCommand2"
+                  style="push">
+            </command>
+            <command
+                  commandId="Remove Many Variable"
+                  id="c_refactor.menus.ToolMenuCommand3"
+                  style="push">
+            </command>
+            <command
+                  commandId="Remove Loop Structure"
+                  id="c_refactor.menus.ToolMenuCommand4"
+                  style="push">
+            </command>
+            <command
+                  commandId="Remove Global Variable"
+                  id="c_refactor.menus.ToolMenuCommand5"
+                  style="push">
+            </command>
+            <command
+                  commandId="test001"
+                  id="c_refactor.menus.ToolMenuCommand6"
+                  style="push">
+            </command>
+            <command
+                  commandId="test002"
+                  id="c_refactor.menus.ToolMenuCommand7"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="c_refactor.toolbar">
+            <command
+                  commandId="c_refactor.command"
+                  id="c_refactor.toolbars.ToolMenuCommand"
+                  style="push"
+                  tooltip="C Refactor ...">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="c_refactor.handlers.EliminateCShandler"
+            id="c_refactor.plugin.project.command.classfile"
+            name="Eliminate Common Sub-Expression">
+      </command>
+      <command
+            defaultHandler="c_refactor.handlers.EliminateDChandler"
+            id="c_refactor.plugin.project.command.classfile2"
+            name="Eliminate Dead Code">
+      </command>
+      <command
+            defaultHandler="c_refactor.handlers.RemoveMVhandler"
+            id="c_refactor.plugin.project.command.classfile3"
+            name="Remove Many Variable">
+      </command>
+      <command
+            defaultHandler="c_refactor.handlers.RemoveLShandler"
+            id="c_refactor.plugin.project.command.classfile4"
+            name="Remove Loop Structure">
+      </command>
+      <command
+            defaultHandler="c_refactor.handlers.RemoveGVhandler"
+            id="c_refactor.plugin.project.command.classfile5"
+            name="Remove Global Variable">
+      </command>
+      <command
+            defaultHandler="c_refactor.handlers.test001"
+            id="c_refactor.plugin.project.command.classfile6"
+            name="test001">
+      </command>
+      <command
+            defaultHandler="c_refactor.handlers.test002"
+            id="c_refactor.plugin.project.command.classfile7"
+            name="test002">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="c_refactor.views.EliminateCategory"
+            name="EliminateCategory">
+      </category>
+      <view
+            category="c_refactor.views.EliminateCategory"
+            class="c_refactor.views.EliminateView"
+            id="c_refactor.views.EliminateView"
+            name="EliminateView"
+            restorable="true">
+      </view>
+   </extension>
+   
+   
+  <extension 
+      point="org.eclipse.jdt.ui.javaCompletionProposalComputer"
+       id="test1"
+         name="test1">
+     <javaCompletionProposalComputer
+      class="test.CompletionProposalComputer"
+        categoryId="org.eclipse.ui.texteditor.textual_proposals">
+       <partition type="__java_string"/>
+     </javaCompletionProposalComputer>
+    </extension>
+   <extension 
+      point="org.eclipse.jdt.ui.javaCompletionProposalComputer"
+       id="test2 "
+         name="test2">
+     <javaCompletionProposalComputer
+      class="test.JexCompletionProposalComputer2"
+        categoryId="org.eclipse.ui.texteditor.textual_proposals">
+       <partition type="__dftl_partition_content_type"/>
+     </javaCompletionProposalComputer>
+    </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="c_refactor.ActionSet"
+            label="EliminateCS ActionSet">
+         <action
+               id="c_refactor.action1"
+               label="EliminateCS Action"
+               style="push">
+         </action>
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="c_refactor.handlers.EliminateDChandler"
+            commandId="Eliminate Dead Code">
+      </handler>
+      <handler
+            class="c_refactor.handlers.EliminateCShandler"
+            commandId="Eliminate Common Sub-Expression">
+      </handler>
+      <handler
+            class="c_refactor.handlers.RemoveMVhandler"
+            commandId="Remove Many Variable">
+      </handler>
+      <handler
+            class="c_refactor.handlers.RemoveLShandler"
+            commandId="Remove Loop Structure">
+      </handler>
+      <handler
+            class="c_refactor.handlers.RemoveGVhandler"
+            commandId="Remove Global Variable">
+      </handler>
+      <handler
+            class="c_refactor.handlers.test001"
+            commandId="test001">
+      </handler>
+      <handler
+            class="c_refactor.handlers.test002"
+            commandId="test002">
+      </handler>
+   </extension>  
+   
+</plugin>

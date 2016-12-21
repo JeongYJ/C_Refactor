@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %fragmentName.macosx
+Bundle-SymbolicName: org.eclipse.cdt.core.macosx;singleton:=true
+Bundle-Version: 5.3.0.201509131935
+Bundle-ClassPath: org.eclipse.cdt.core.macosx_5.3.0.201509131935.jar
+Bundle-Vendor: %providerName
+Fragment-Host: org.eclipse.cdt.core.native;bundle-version="[5.7.0,6.0.0)"
+Bundle-Localization: plugin
+Created-By: Apache Maven 3.0.5
+Archiver-Version: Plexus Archiver
+Build-Jdk: 1.7.0_80
+Eclipse-PlatformFilter: (osgi.os=macosx)
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/cdt/org.eclipse.cdt.git;path="core/org.eclipse.cdt.core.macosx";commitId=52d07e393392fdd44090aca3520124e73388d3b6
+Built-By: genie.cdt
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component name="org.eclipse.ltk.ui.refactoring_3.7.200.v20140625-1835" version="1.2">
+    <plugin id="org.eclipse.ltk.ui.refactoring_3.7.200.v20140625-1835"/>
+    <package name="org.eclipse.ltk.ui.refactoring" visibility="1">
+        <type name="ChangePreviewViewerInput" restrictions="2"/>
+        <type name="IRefactoringUIStatusCodes" restrictions="3"/>
+        <type name="LanguageElementNode" restrictions="0">
+            <method name="internalAddChild" restrictions="8" signature="(Lorg/eclipse/ltk/ui/refactoring/TextEditChangeNode$ChildNode;)V"/>
+        </type>
+        <type name="RedoRefactoringAction" restrictions="2"/>
+        <type name="RefactoringUI" restrictions="2"/>
+        <type name="RefactoringWizard" restrictions="0">
+            <method name="internalCreateChange" restrictions="8" signature="(Lorg/eclipse/ltk/internal/ui/refactoring/InternalAPI;Lorg/eclipse/ltk/core/refactoring/CreateChangeOperation;Z)Lorg/eclipse/ltk/core/refactoring/Change;"/>
+            <method name="internalGetExpandFirstNode" restrictions="8" signature="(Lorg/eclipse/ltk/internal/ui/refactoring/InternalAPI;)Z"/>
+            <method name="internalHasPreviewPage" restrictions="8" signature="(Lorg/eclipse/ltk/internal/ui/refactoring/InternalAPI;)Z"/>
+            <method name="internalIsYesNoStyle" restrictions="8" signature="(Lorg/eclipse/ltk/internal/ui/refactoring/InternalAPI;)Z"/>
+            <method name="internalPerformFinish" restrictions="8" signature="(Lorg/eclipse/ltk/internal/ui/refactoring/InternalAPI;Lorg/eclipse/ltk/core/refactoring/PerformChangeOperation;)Lorg/eclipse/ltk/internal/ui/refactoring/FinishResult;"/>
+            <method name="internalSetChange" restrictions="8" signature="(Lorg/eclipse/ltk/internal/ui/refactoring/InternalAPI;Lorg/eclipse/ltk/core/refactoring/Change;)V"/>
+            <method name="internalSetPreviewShown" restrictions="8" signature="(Lorg/eclipse/ltk/internal/ui/refactoring/InternalAPI;Z)V"/>
+            <method name="internalShowBackButtonOnStatusDialog" restrictions="8" signature="(Lorg/eclipse/ltk/internal/ui/refactoring/InternalAPI;)Z"/>
+        </type>
+        <type name="RefactoringWizardOpenOperation" restrictions="2"/>
+        <type name="RefactoringWizardPage" restrictions="2"/>
+        <type name="UndoRefactoringAction" restrictions="2"/>
+    </package>
+    <package name="org.eclipse.ltk.ui.refactoring.history" visibility="1">
+        <type name="IRefactoringHistoryControl" restrictions="3"/>
+        <type name="ISortableRefactoringHistoryControl" restrictions="3"/>
+        <type name="RefactoringHistoryContentProvider" restrictions="2"/>
+        <type name="RefactoringHistoryLabelProvider" restrictions="2"/>
+        <type name="RefactoringHistoryWizard" restrictions="0">
+            <method name="getErrorPage" restrictions="8" signature="()Lorg/eclipse/ltk/internal/ui/refactoring/IErrorWizardPage;"/>
+            <method name="getPreviewPage" restrictions="8" signature="()Lorg/eclipse/ltk/internal/ui/refactoring/IPreviewWizardPage;"/>
+        </type>
+    </package>
+</component>
